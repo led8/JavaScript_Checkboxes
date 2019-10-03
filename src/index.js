@@ -6,9 +6,9 @@ let inBetween = false;
 
 function handleCheck(e) {
 
-  firstCheck = e.currentTarget;
+  firstCheck = this;
 
-  if (e.shiftKey && e.currentTarget.checked) {
+  if (e.shiftKey && this.checked) {
     checkboxes.forEach((checkbox) => {
       console.log(checkbox);
       if (checkbox === firstCheck || checkbox === lastCheck) {
@@ -21,7 +21,7 @@ function handleCheck(e) {
     });
   };
 
-  lastCheck = e.currentTarget;
+  lastCheck = this;
 };
 
 checkboxes.forEach((checkbox) => {
